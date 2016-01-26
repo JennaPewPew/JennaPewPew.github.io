@@ -1,66 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Example of Bootstrap 3 Responsive Navbar</title>
+<meta charset="UTF-8">
+<title>Bootstrap 3 Responsive Layout Example</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<style type="text/css">
-	.navbar{
-		margin-top: 20px;
-	}
-</style>
 </head>
 <body>
-<div class="container">
-    <nav role="navigation" class="navbar navbar-inverse">
-        <!-- Brand and toggle get grouped for better mobile display -->
+<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="container">
         <div class="navbar-header">
-            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="#" class="navbar-brand">Brand</a>
+            <a class="navbar-brand" href="#">Tutorial Republic</a>
         </div>
-        <!-- Collection of nav links, forms, and other content for toggling -->
-        <div id="navbarCollapse" class="collapse navbar-collapse">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Profile</a></li>
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Messages <b class="caret"></b></a>
-                    <ul role="menu" class="dropdown-menu">
-                        <li><a href="#">Inbox</a></li>
-                        <li><a href="#">Drafts</a></li>
-                        <li><a href="#">Sent Items</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Trash</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <form role="search" class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" placeholder="Search" class="form-control">
-                </div>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Login</a></li>
+                <li class="active"><a href="http://www.tutorialrepublic.com" target="_blank">Home</a></li>
+                <li><a href="http://www.tutorialrepublic.com/about-us.php" target="_blank">About</a></li>
+                <li><a href="http://www.tutorialrepublic.com/contact-us.php" target="_blank">Contact</a></li>
             </ul>
         </div>
-    </nav>
-</div>
-
-<div class="jumbotron">
-    <div class="container">
-        <h1>Learn to Create Websites</h1>
-        <p>In today's world internet is the most popular way…</p>
-        <p><a href="#" class="btn btn-primary btn-lg">Learn more</a></p>
     </div>
+</nav>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Learn to Create Websites</h1>
+        <p>In today's world internet is the most popular way of connecting with the people. At <a href="http://www.tutorialrepublic.com" target="_blank">tutorialrepublic.com</a> you will learn the essential of web development technologies along with real life practice example, so that you can create your own website to connect with the people around the world.</p>
+        <p><a href="http://www.tutorialrepublic.com" target="_blank" class="btn btn-success btn-lg">Get started today</a></p>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-2 bg-primary">
+            <p>
+           		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh eu malesuada imperdiet, augue metus venenatis neque, vel rutrum tortor purus vitae felis. Praesent tincidunt, magna ac luctus hendrerit, sapien nisi tempor lacus, eget suscipit ante metus vel dui. Duis dictum non erat sit amet porttitor. Mauris vulputate eros sed euismod pellentesque. Morbi nulla libero, tempor et mi id, semper fringilla libero. Ut non ligula luctus leo lacinia auctor at in neque. Fusce id purus vel erat fermentum porttitor. Mauris sit amet sodales enim, eget cursus lectus. Donec pulvinar posuere nibh, ac efficitur nisi egestas ut.
+            </p>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-2 bg-primary">
+	            <p>
+           		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh eu malesuada imperdiet, augue metus venenatis neque, vel rutrum tortor purus vitae felis. Praesent tincidunt, magna ac luctus hendrerit, sapien nisi tempor lacus, eget suscipit ante metus vel dui. Duis dictum non erat sit amet porttitor. Mauris vulputate eros sed euismod pellentesque. Morbi nulla libero, tempor et mi id, semper fringilla libero. Ut non ligula luctus leo lacinia auctor at in neque. Fusce id purus vel erat fermentum porttitor. Mauris sit amet sodales enim, eget cursus lectus. Donec pulvinar posuere nibh, ac efficitur nisi egestas ut.
+            </p>
+        <div class="clearfix visible-sm-block"></div>
+        <div class="col-sm-6 col-md-4 col-lg-2 bg-primary">
+				            <p>
+           		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh eu malesuada imperdiet, augue metus venenatis neque, vel rutrum tortor purus vitae felis. Praesent tincidunt, magna ac luctus hendrerit, sapien nisi tempor lacus, eget suscipit ante metus vel dui. Duis dictum non erat sit amet porttitor. Mauris vulputate eros sed euismod pellentesque. Morbi nulla libero, tempor et mi id, semper fringilla libero. Ut non ligula luctus leo lacinia auctor at in neque. Fusce id purus vel erat fermentum porttitor. Mauris sit amet sodales enim, eget cursus lectus. Donec pulvinar posuere nibh, ac efficitur nisi egestas ut.
+            </p>
+        </div>
+        <div class="clearfix visible-md-block"></div>
+        <div class="col-sm-6 col-md-4 col-lg-2 bg-primary">
+			            <p>
+           		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh eu malesuada imperdiet, augue metus venenatis neque, vel rutrum tortor purus vitae felis. Praesent tincidunt, magna ac luctus hendrerit, sapien nisi tempor lacus, eget suscipit ante metus vel dui. Duis dictum non erat sit amet porttitor. Mauris vulputate eros sed euismod pellentesque. Morbi nulla libero, tempor et mi id, semper fringilla libero. Ut non ligula luctus leo lacinia auctor at in neque. Fusce id purus vel erat fermentum porttitor. Mauris sit amet sodales enim, eget cursus lectus. Donec pulvinar posuere nibh, ac efficitur nisi egestas ut.
+            </p>
+        <div class="clearfix visible-sm-block"></div>
+        <div class="col-sm-6 col-md-4 col-lg-2 bg-primary">
+				            <p>
+           		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh eu malesuada imperdiet, augue metus venenatis neque, vel rutrum tortor purus vitae felis. Praesent tincidunt, magna ac luctus hendrerit, sapien nisi tempor lacus, eget suscipit ante metus vel dui. Duis dictum non erat sit amet porttitor. Mauris vulputate eros sed euismod pellentesque. Morbi nulla libero, tempor et mi id, semper fringilla libero. Ut non ligula luctus leo lacinia auctor at in neque. Fusce id purus vel erat fermentum porttitor. Mauris sit amet sodales enim, eget cursus lectus. Donec pulvinar posuere nibh, ac efficitur nisi egestas ut.
+            </p>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-2 bg-primary">
+				            <p>
+           		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt, nibh eu malesuada imperdiet, augue metus venenatis neque, vel rutrum tortor purus vitae felis. Praesent tincidunt, magna ac luctus hendrerit, sapien nisi tempor lacus, eget suscipit ante metus vel dui. Duis dictum non erat sit amet porttitor. Mauris vulputate eros sed euismod pellentesque. Morbi nulla libero, tempor et mi id, semper fringilla libero. Ut non ligula luctus leo lacinia auctor at in neque. Fusce id purus vel erat fermentum porttitor. Mauris sit amet sodales enim, eget cursus lectus. Donec pulvinar posuere nibh, ac efficitur nisi egestas ut.
+            </p>
+        </div>
+    </div>
+
 </div>
-
-
 </body>
-</html>   
+</html>
