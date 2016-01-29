@@ -1,0 +1,27 @@
+<html>
+<script>
+    var writeTable = function(timesNum, startV, endV) {
+        for (var i = startV; i <= endV; i++) {
+            document.write(timesNum + "x" + i + "=" + i * timesNum + "<br />");
+        }
+    };
+
+    var num = 1;
+    while (num != -1) {
+        num = prompt("Please enter a number, to stop enter -1");
+        while (isNaN(num)) {
+            num = prompt("That is not a number. Please enter a number, to stop enter -1");
+        }
+
+        if (num != -1) {
+            document.write("The" + " " + num + " " + "Times" + " " + "Table" + "<br />");
+            writeTable(num, 1, 12);
+
+
+        }
+
+
+    }
+</script>
+
+</html>

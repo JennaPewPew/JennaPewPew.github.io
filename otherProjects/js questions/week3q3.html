@@ -1,6 +1,13 @@
 <html>
 <script>
+    var writeTable = function(timesNum, startV, endV) {
+        for (var i = startV; i <= endV; i++) {
+            document.write(timesNum + "*" + i + "=" + i * timesNum + "<br />");
+        }
+    };
 
+
+    writeTable(4, 4, 9);
 </script>
 
 </html>
