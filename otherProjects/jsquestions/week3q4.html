@@ -7,13 +7,13 @@
     };
 
     var num = 1;
-    while (num != -1) {
+    while (num != -1) { // so long as -1 is not inputed, the loop will run continuous
         num = prompt("Please enter a number, to stop enter -1");
-        while (isNaN(num)) {
+        while (isNaN(num)) { // had to find isNaN in the coding notes and had to further look up how to properly use it
             num = prompt("That is not a number. Please enter a number, to stop enter -1");
         }
 
-        if (num != -1) {
+        if (num != -1) { // so long as a legitimate number is submitted then it will print out the input numbers times table up until twelve
             document.write("The" + " " + num + " " + "Times" + " " + "Table" + "<br />");
             writeTable(num, 1, 12);
 

@@ -1,13 +1,13 @@
 <html>
 <script>
     var writeTable = function(timesNum, startV, endV) {
-        for (var i = startV; i <= endV; i++) {
+        for (var i = startV; i <= endV; i++) { // these are the parameters that dictate when to stop, start and what the intervals are
             document.write(timesNum + "*" + i + "=" + i * timesNum + "<br />");
         }
     };
 
 
-    writeTable(4, 4, 9);
+    writeTable(4, 4, 9); // finding out these variable took some trial and error, I was confusing this with the way you pick out numbers in an array
 </script>
 
 </html>

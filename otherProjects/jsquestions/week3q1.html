@@ -1,9 +1,9 @@
 <html>
 <script>
     var userAge = prompt("Please enter your age");
-    if (userAge == 0) {
+    if (userAge == 0) { // the original problem here was the need for a double == and an unneeded semicolon
         alert("So you're a baby!");
-    } else if (userAge < 0 || userAge > 200) {
+    } else if (userAge < 0 || userAge > 200) { // the problem here was the need for an additional |
         alert("I think you may be lying about your age");
     } else {
         alert("That's a good age");
