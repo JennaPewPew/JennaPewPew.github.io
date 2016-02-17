@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Week 5 Questions</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#q1" aria-controls="home" role="tab" data-toggle="tab">Q1</a></li>
+      <li role="presentation"><a href="#q2" aria-controls="profile" role="tab" data-toggle="tab">Q2</a></li>
+      <li role="presentation"><a href="#q3" aria-controls="messages" role="tab" data-toggle="tab">Q3</a></li>
+      <li role="presentation"><a href="#q4" aria-controls="settings" role="tab" data-toggle="tab">Q4</a></li>
+      <li role="presentation"><a href="#q5" aria-controls="profile" role="tab" data-toggle="tab">Q5</a></li>
+      <li role="presentation"><a href="#q6" aria-controls="messages" role="tab" data-toggle="tab">Q6</a></li>
+      <li role="presentation"><a href="#q7" aria-controls="settings" role="tab" data-toggle="tab">Q7</a></li>
+      <li role="presentation"><a href="#q8" aria-controls="messages" role="tab" data-toggle="tab">Q8</a></li>
+      <li role="presentation"><a href="#q9" aria-controls="settings" role="tab" data-toggle="tab">Q9</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Question One -->
+      <div role="tabpanel" class="tab-pane active" id="q1">
+        <div class="row">
+          <div class="col-md-12">
+            <pre> <!--Pre Code Here -->
+              function getTriangle() {
+                var str = "";
+
+                for (var i = 1; i <= 6; i++) {
+
+                  for (var j = 1; j <= i; j++) {
+
+                    str = str + "#"
+                  }
+                  str = str + "br/"
+                }
+                $("#q1result").html(str);
+              }
+              $("#q1button").on("click", function() {
+                getTriangle();
+              });
+          </pre>
+          </div>
+
+          <div class="col-md-12">
+            <!--Da button -->
+
+            <button id="q1button" class="btn btn-success" type="button">Click Here</button>
+          </div>
+
+          <div class="col-md-12">
+            <!--Da Result -->
+            <div id="q1result">
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Question two -->
+      <div role="tabpanel" class="tab-pane" id="q2">
+        <div class="row">
+          <div class="col-md-12">
+            <pre> <!--Pre Code Here -->
+              function printFooBar() {
+                var print = "";
+                var number = Number(1);
+                for (i = Number(1); i <= 100; i++) {
+
+                  if (i % 3 == 0 && i % 5 == 0) {
+                    print = print + "FooBar" + "br/";
+                  } else if (i % 3 == 0) {
+                    print = print + "Foo" + "br/";
+                  } else if (i % 5 == 0) {
+                    print = print + "Bar " + "br/";
+                  } else {
+                    print = print + i  +"br/";
+                  }
+
+                }
+                $("#q2result").html(print);
+              }
+
+              $("#q2button").on("click", function() {
+                printFooBar();
+
+              });
+          </pre>
+          </div>
+
+          <div class="col-md-12">
+            <!--Da button -->
+
+            <button id="q2button" class="btn btn-success" type="button">Click Here</button>
+          </div>
+
+          <div class="col-md-12">
+            <!--Da Result -->
+            <div id="q2result">
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Question three -->
+      <div role="tabpanel" class="tab-pane" id="q3">
+        <div class="row">
+          <div class="col-md-12">
+            <pre> <!--Pre Code Here -->
+              function chessBoard() {
+                var size = prompt("Please enter an Even Number");
+                var line = '';
+                var print = "";
+                var i = 0;
+
+                for (i = 0; i < size / 2; i++) {
+                  line = print + line + '# ';
+                }
+
+                for (i = 0; i < size; i++) {
+                  if (i % 2 === 0) { //if i is an even row then add a space
+                    print = print + (' ' + line) + "br/";
+                  } else {
+                    print = print + (line) + "br/";
+                  }
+                }
+                $("#q3result").html(print);
+              }
+
+
+              $("#q3button").on("click", function() {
+
+                chessBoard();
+              });
+          </pre>
+          </div>
+
+          <div class="col-md-12">
+            <!--Da button -->
+
+            <button id="q3button" class="btn btn-success" type="button">Click Here</button>
+          </div>
+
+          <div class="col-md-12">
+            <!--Da Result -->
+            <div id="q3result">
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Question Four -->
+      <div role="tabpanel" class="tab-pane" id="q4">
+        <div class="row">
+          <div class="col-md-12">
+            <pre> <!--Pre Code Here -->
+              function countBs(bString) {
+                var count = 0;
+                for (var i = 0; i < bString.length; i++) {
+                  if (bString.charAt(i) == 'B') {
+                      count = (count + 1);
+                  }
+                }
+                  return count;
+              }
+
+
+              $("#q4button").on("click", function() {
+
+                var userInput = prompt ("Please enter a sentence");
+                var x = countBs(userInput);
+
+                $("#q4result").html(x);
+              });
+          </pre>
+          </div>
+
+          <div class="col-md-12">
+            <!--Da button -->
+
+            <button id="q4button" class="btn btn-success" type="button">Click Here</button>
+          </div>
+
+          <div class="col-md-12">
+            <!--Da Result -->
+            <div id="q4result">
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Question Five -->
+      <div role="tabpanel" class="tab-pane" id="q5">
+        <div class="row">
+          <div class="col-md-12">
+            <pre> <!--Pre Code Here -->
+              function countChar(cString, charMatch) {
+                var count = 0;
+                for (var i = 0; i < cString.length; i++) {
+                  if (cString.charAt(i) == charMatch) {
+                    count = (count + 1);
+                  }
+                }
+                return count;
+              }
+              $("#q5button").on("click", function() {
+
+                var inputOne = prompt("Please enter a sentence");
+                var inputTwo = prompt("What character are you looking for?")
+
+                var t = countChar(inputOne, inputTwo)
+                $("#q5result").html(t);
+              });
+          </pre>
+          </div>
+
+          <div class="col-md-12">
+            <!--Da button -->
+
+            <button id="q5button" class="btn btn-success" type="button">Click Here</button>
+          </div>
+
+          <div class="col-md-12">
+            <!--Da Result -->
+            <div id="q5result">
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Question Six -->
+      <div role="tabpanel" class="tab-pane" id="q6">
+        <div class="row">
+          <div class="col-md-12">
+            <pre> <!--Pre Code Here -->
+                  Put trial code here
+          </pre>
+          </div>
+
+          <div class="col-md-12">
+            <!--Da button -->
+
+            <button id="q6button" class="btn btn-success" type="button">Click Here</button>
+          </div>
+
+          <div class="col-md-12">
+            <!--Da Result -->
+            <div id="q6result">
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Question Seven -->
+      <div role="tabpanel" class="tab-pane" id="q7">
+        <div class="row">
+          <div class="col-md-12">
+            <pre> <!--Pre Code Here -->
+                Answer to Come and a later date
+          </pre>
+          </div>
+
+          <div class="col-md-12">
+            <!--Da button -->
+
+            <button id="q7button" class="btn btn-success" type="button">Click Here</button>
+          </div>
+
+          <div class="col-md-12">
+            <!--Da Result -->
+            <div id="q7result">
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Question Eight -->
+      <div role="tabpanel" class="tab-pane" id="q8">
+        <div class="row">
+          <div class="col-md-12">
+            <pre> <!--Pre Code Here -->
+                  Answer to Come and a later date
+          </pre>
+          </div>
+
+          <div class="col-md-12">
+            <!--Da button -->
+
+            <button id="q8button" class="btn btn-success" type="button">Click Here</button>
+          </div>
+
+          <div class="col-md-12">
+            <!--Da Result -->
+            <div id="q8result">
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Question Nine -->
+      <div role="tabpanel" class="tab-pane" id="q9">
+        <div class="row">
+          <div class="col-md-12">
+            <pre> <!--Pre Code Here -->
+                  Answer to Come and a later date
+          </pre>
+          </div>
+
+          <div class="col-md-12">
+            <!--Da button -->
+
+            <button id="q9button" class="btn btn-success" type="button">Click Here</button>
+          </div>
+
+          <div class="col-md-12">
+            <!--Da Result -->
+            <div id="q9result">
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      // code in the general function to allow question one to run
+      //this function prints a triangle of hashtags
+      function getTriangle() {
+        var str = "";
+        // the string goes here
+
+        for (var i = 1; i <= 6; i++) {
+
+          for (var j = 1; j <= i; j++) {
+
+            str = str + "#";
+          }
+          str = str + "<br/>";
+        }
+        $("#q1result").html(str);
+      }
+      //end of code in the general functio for question one
+      //child function that operates the button for question one
+      $("#q1button").on("click", function() {
+        getTriangle();
+      }); // end of child function for question one
+      //Start of second question in the general function
+      function printFooBar() {
+        var print = "";
+        var number = Number(1);
+        for (i = Number(1); i <= 100; i++) {
+
+          if (i % 3 == 0 && i % 5 == 0) {
+            print = print + "FooBar" + "<br/>";
+          } else if (i % 3 == 0) {
+            print = print + "Foo" + "<br/>";
+          } else if (i % 5 == 0) {
+            print = print + "Bar " + "<br/>";
+          } else {
+            print = print + i + "<br/>";
+          }
+
+        }
+        $("#q2result").html(print);
+      }
+
+      $("#q2button").on("click", function() {
+        printFooBar();
+
+      });
+      // End of second question
+      //Start of third question
+      function chessBoard() {
+        var size = prompt("Please enter a Number");
+        var line = '';
+        var print = "";
+        var i = 0;
+
+        for (i = 0; i < size / 2; i++) {
+          line = print + line + '# ';
+        }
+
+        for (i = 0; i < size; i++) {
+          if (i % 2 === 0) { //if i is an even row then add a space
+            print = print + (' ' + line) + "<br/>";
+          } else {
+            print = print + (line) + "<br/>";
+          }
+        }
+        $("#q3result").html(print);
+      }
+
+
+      $("#q3button").on("click", function() {
+
+        chessBoard();
+      });
+      //End of third question
+      // start of fourth question
+      function countBs(bString) {
+        var count = 0;
+        for (var i = 0; i < bString.length; i++) {
+          if (bString.charAt(i) == 'B') {
+            count = (count + 1);
+          }
+        }
+        return count;
+      }
+
+
+      $("#q4button").on("click", function() {
+
+        var userInput = prompt("Please enter a sentence");
+        var x = countBs(userInput);
+
+        $("#q4result").html(x);
+      });
+      //End question four
+      //Start question five
+      function countChar(cString, charMatch) {
+        var count = 0;
+        for (var i = 0; i < cString.length; i++) {
+          if (cString.charAt(i) == charMatch) {
+            count = (count + 1);
+          }
+        }
+        return count;
+      }
+      $("#q5button").on("click", function() {
+
+        var inputOne = prompt("Please enter a sentence");
+        var inputTwo = prompt("What character are you looking for?")
+
+        var t = countChar(inputOne, inputTwo)
+        $("#q5result").html(t);
+      });
+      //end question five
+      $("#q6button").on("click", function() {
+        $("#q6result").html("answer six!");
+      });
+      $("#q7button").on("click", function() {
+        $("#q7result").html("Answer to Come and a later date!");
+      });
+      $("#q8button").on("click", function() {
+        $("#q8result").html("Answer to Come and a later date!");
+      });
+      $("#q9button").on("click", function() {
+        $("#q9result").html("Answer to Come and a later date!");
+      });
+    });
+  </script>
+
+</body>
+
+</html>
