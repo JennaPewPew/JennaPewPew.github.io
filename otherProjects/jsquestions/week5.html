@@ -8,6 +8,19 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <style>
+    pre {
+      font-weight: bold;
+      background:black;
+      color:green;
+    }
+    .question{
+      font-size: 25px;
+      align-content: center;
+    }
+
+  </style>
 </head>
 
 <body>
@@ -32,6 +45,9 @@
       <div role="tabpanel" class="tab-pane active" id="q1">
         <div class="row">
           <div class="col-md-12">
+            <div class="question">
+              Generate a triangle using JavaScript
+            </div>
             <pre> <!--Pre Code Here -->
               function getTriangle() {
                 var str = "";
@@ -55,7 +71,7 @@
           <div class="col-md-12">
             <!--Da button -->
 
-            <button id="q1button" class="btn btn-success" type="button">Click Here</button>
+            <button id="q1button" class="btn btn-success pull-right" type="button">Click Here</button>
           </div>
 
           <div class="col-md-12">
@@ -72,6 +88,9 @@
       <div role="tabpanel" class="tab-pane" id="q2">
         <div class="row">
           <div class="col-md-12">
+            <div class="question">
+              Write a code that replaces certain numbers with the words Foo, Bar or FooBar.
+            </div>
             <pre> <!--Pre Code Here -->
               function printFooBar() {
                 var print = "";
@@ -102,7 +121,7 @@
           <div class="col-md-12">
             <!--Da button -->
 
-            <button id="q2button" class="btn btn-success" type="button">Click Here</button>
+            <button id="q2button" class="btn btn-success pull-right" type="button">Click Here</button>
           </div>
 
           <div class="col-md-12">
@@ -119,9 +138,12 @@
       <div role="tabpanel" class="tab-pane" id="q3">
         <div class="row">
           <div class="col-md-12">
+            <div class="question">
+              Write a code that creates a square chessboard based on user input.
+            </div>
             <pre> <!--Pre Code Here -->
               function chessBoard() {
-                var size = prompt("Please enter an Even Number");
+                var size = prompt("Please enter a Number");
                 var line = '';
                 var print = "";
                 var i = 0;
@@ -151,7 +173,7 @@
           <div class="col-md-12">
             <!--Da button -->
 
-            <button id="q3button" class="btn btn-success" type="button">Click Here</button>
+            <button id="q3button" class="btn btn-success pull-right" type="button">Click Here</button>
           </div>
 
           <div class="col-md-12">
@@ -168,6 +190,9 @@
       <div role="tabpanel" class="tab-pane" id="q4">
         <div class="row">
           <div class="col-md-12">
+            <div class="question">
+              Write a code that counts the number of Capital B's in a sentence.
+            </div>
             <pre> <!--Pre Code Here -->
               function countBs(bString) {
                 var count = 0;
@@ -193,7 +218,7 @@
           <div class="col-md-12">
             <!--Da button -->
 
-            <button id="q4button" class="btn btn-success" type="button">Click Here</button>
+            <button id="q4button" class="btn btn-success pull-right" type="button">Click Here</button>
           </div>
 
           <div class="col-md-12">
@@ -210,6 +235,9 @@
       <div role="tabpanel" class="tab-pane" id="q5">
         <div class="row">
           <div class="col-md-12">
+            <div class="question">
+              Write a code that counts out the number of times a given sentence contains a specified character.
+            </div>
             <pre> <!--Pre Code Here -->
               function countChar(cString, charMatch) {
                 var count = 0;
@@ -234,7 +262,7 @@
           <div class="col-md-12">
             <!--Da button -->
 
-            <button id="q5button" class="btn btn-success" type="button">Click Here</button>
+            <button id="q5button" class="btn btn-success pull-right" type="button">Click Here</button>
           </div>
 
           <div class="col-md-12">
@@ -259,7 +287,7 @@
           <div class="col-md-12">
             <!--Da button -->
 
-            <button id="q6button" class="btn btn-success" type="button">Click Here</button>
+            <button id="q6button" class="btn btn-success pull-right" type="button">Click Here</button>
           </div>
 
           <div class="col-md-12">
@@ -283,7 +311,7 @@
           <div class="col-md-12">
             <!--Da button -->
 
-            <button id="q7button" class="btn btn-success" type="button">Click Here</button>
+            <button id="q7button" class="btn btn-success pull-right" type="button">Click Here</button>
           </div>
 
           <div class="col-md-12">
@@ -299,6 +327,7 @@
       <div role="tabpanel" class="tab-pane" id="q8">
         <div class="row">
           <div class="col-md-12">
+
             <pre> <!--Pre Code Here -->
                   Answer to Come and a later date
           </pre>
@@ -307,7 +336,7 @@
           <div class="col-md-12">
             <!--Da button -->
 
-            <button id="q8button" class="btn btn-success" type="button">Click Here</button>
+            <button id="q8button" class="btn btn-success pull-right" type="button">Click Here</button>
           </div>
 
           <div class="col-md-12">
@@ -331,7 +360,7 @@
           <div class="col-md-12">
             <!--Da button -->
 
-            <button id="q9button" class="btn btn-success" type="button">Click Here</button>
+            <button id="q9button" class="btn btn-success pull-right" type="button">Click Here</button>
           </div>
 
           <div class="col-md-12">
@@ -355,7 +384,7 @@
         var str = "";
         // the string goes here
 
-        for (var i = 1; i <= 6; i++) {
+        for (var i = 1; i <= 7; i++) {
 
           for (var j = 1; j <= i; j++) {
 
