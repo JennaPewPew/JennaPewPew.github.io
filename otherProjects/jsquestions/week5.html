@@ -12,14 +12,14 @@
   <style>
     pre {
       font-weight: bold;
-      background:black;
-      color:green;
-    }
-    .question{
-      font-size: 25px;
-      align-content: center;
+      background: black;
+      color: green;
     }
 
+    .question {
+      font-size: 20px;
+      align-content: center;
+    }
   </style>
 </head>
 
@@ -279,8 +279,29 @@
       <div role="tabpanel" class="tab-pane" id="q6">
         <div class="row">
           <div class="col-md-12">
+            <div class="question">
+              Write a range function that takes two arguments, start and end, and returns an array containing all the numbers from start up to (and including) end.
+            </div>
             <pre> <!--Pre Code Here -->
-                  Put trial code here
+              function range(start, end) {
+
+                var arr = [];
+                if (start <= end) { // find out how to do an if NaN
+                  for (start; start <= end; start++) {
+                    arr.push(start);
+
+                  }
+                }
+                return arr;
+              }
+
+              $("#q6button").on("click", function() {
+                var numberOne= prompt("Please enter the first number")
+                var numberTwo= prompt("Please enter the second number")
+
+                var rangeAnswer = range(numberOne, numberTwo);
+                $("#q6result").html("Answer is:" + rangeAnswer.join());
+              });
           </pre>
           </div>
 
@@ -302,9 +323,26 @@
       <!-- Question Seven -->
       <div role="tabpanel" class="tab-pane" id="q7">
         <div class="row">
+          <div class="question">
+            Write a sum function that takes an array of numbers and returns the sum of these numbers.
+          </div>
           <div class="col-md-12">
             <pre> <!--Pre Code Here -->
-                Answer to Come and a later date
+              function sum(array) {
+                var sm = 0;
+                for (var i = 0; i < array.length; i++) {
+                  sm += parseInt(array[i]);
+                }
+                return sm;
+              }
+
+              $("#q7button").on("click", function() {
+                var startNum = prompt ("Please enter the first number")
+                var endNum = prompt("Please enter the second number")
+
+                var sumTotal = sum(range(startNum,endNum))
+              $("#q7result").html( "Answer is:" + " " + sumTotal);
+              });
           </pre>
           </div>
 
@@ -327,9 +365,26 @@
       <div role="tabpanel" class="tab-pane" id="q8">
         <div class="row">
           <div class="col-md-12">
+            <div class="question">
+               Write a function, reverseArray that takes an array(Apples, Bananas, Oranges) as argument and produces a new array that has the same elements in the inverse order without using .reverse()
+            </div>
 
             <pre> <!--Pre Code Here -->
-                  Answer to Come and a later date
+              function reverseArray(array){
+                var rev = []
+                for( var i = array.length-1; i >= 0; i--){
+
+                  rev.push(array[i])
+                }
+                return rev
+              }
+
+
+              $("#q8button").on("click", function() {
+
+                var list = ["Apples", "Bananas", "Oranges"]
+                $("#q8result").html("Answer is:"+" "+ reverseArray(list));
+              });
           </pre>
           </div>
 
@@ -490,18 +545,66 @@
         $("#q5result").html(t);
       });
       //end question five
+      //start question six
+      function range(start, end) {
+
+        var arr = [];
+        if (start <= end) { // find out how to do an if NaN
+          for (start; start <= end; start++) {
+            arr.push(start);
+
+          }
+        }
+        return arr;
+      }
+
       $("#q6button").on("click", function() {
-        $("#q6result").html("answer six!");
+        var numberOne = prompt("Please enter the first number")
+        var numberTwo = prompt("Please enter the second number")
+
+        var rangeAnswer = range(numberOne, numberTwo);
+        $("#q6result").html("Answer is:" + rangeAnswer.join());
       });
+      //end question six
+      // start question seven
+      function sum(array) {
+        var sm = 0;//defaults to zero until the function does its thing
+        for (var i = 0; i < array.length; i++) {
+          sm += parseInt(array[i]);
+        }
+        return sm;
+      }
+
       $("#q7button").on("click", function() {
-        $("#q7result").html("Answer to Come and a later date!");
+        var startNum = prompt ("Please enter the first number")
+        var endNum = prompt("Please enter the second number")
+
+        var sumTotal = sum(range(startNum,endNum))
+      $("#q7result").html( "Answer is:" + " " + sumTotal);
       });
+      //end question seven
+      //start question eight
+      function reverseArray(array){
+        var rev = []
+        for( var i = array.length-1; i >= 0; i--){
+
+          rev.push(array[i])
+        }
+        return rev
+      }
+
+
       $("#q8button").on("click", function() {
-        $("#q8result").html("Answer to Come and a later date!");
+
+        var list = ["Apples", "Bananas","Oranges"]
+        $("#q8result").html("Answer is:"+" "+ reverseArray(list));
       });
+      //end question eight
+      // start question nine
       $("#q9button").on("click", function() {
         $("#q9result").html("Answer to Come and a later date!");
       });
+      // end question nine
     });
   </script>
 
