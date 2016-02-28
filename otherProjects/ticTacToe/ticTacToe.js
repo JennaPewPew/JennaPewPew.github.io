@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
   var circleOrEx = "o"; // defaults the first input to the letter o
-  var isGameInProgress = true; // it represents the board?
-  var winningCombos = { // this basically outlines which games win based on where they are placed on the board. For example it outlines that if the top row is completely filled with x's then x wins
+  var isGameInProgress = true; // defaults that a game is in progress
+  var winningCombos = { // this basically outlines which games win based on where they are placed on the board. For example it outlines that if the top row is completely filled with x's then x wins. Tells the function what counts as a winning game.
     0: [ //0 is key
       [1, 2], //this multiDimensional Array is values
       [3, 6],
@@ -47,13 +47,13 @@ $(document).ready(function() {
     ]
   };
 
-  // When you click on a box the program searches the document to see find that div. If the div is empty it then adds a class and fills the space
+  // When you click on a box the program searches the document to  find that div. If the div is .empty class it then adds a class and fills the space
   $("#board").find("div").on("click", function() {
 
-    if (isGameInProgress && $(this).hasClass("empty")) { //If a game is currently in progress and the targeted element has a class of empty it removes the empty class and adds
+    if (isGameInProgress && $(this).hasClass("empty")) { //If a game is currently in progress and the targeted element has a class of empty it removes the empty class and adds the class of either x or o
       $(this).removeClass("empty").append("<span class='" + circleOrEx + "'>" + circleOrEx + "</span");
 
-      checkIfWon($(this).index(), circleOrEx); //Explain
+      checkIfWon($(this).index(), circleOrEx); //Calls a function that checks to see if the input matches one of the winning games outlined in winningCombos, if not it loops to the next players turn
 
       if (circleOrEx === "o") {
         circleOrEx = "x";
@@ -67,26 +67,26 @@ $(document).ready(function() {
   // Creates a new, empty game board
   $("#newGame").on("click", function() {
 
-    var boardSquares = $("#board").find("div"); //what is this variable
-    var firstEmptyMemorySquare = $(".container").find(".nine").filter(function() { //bonus Explain what filter does
+    var boardSquares = $("#board").find("div"); //locates the old board
+    var firstEmptyMemorySquare = $(".container").find(".nine").filter(function() { //finds out how many games there are
       return $.trim($(this).text()) === "" && $(this).children().length === 0;
     }).not("#board").first();
 
-    if (firstEmptyMemorySquare.length == 1) { //what is this if statement doing?
+    if (firstEmptyMemorySquare.length == 1) { //if there is only one board, then start the game
       firstEmptyMemorySquare.html($("#board").html());
-    } else {
+    } else { // find/move old board. find/create new board
       $(".container").find(".nine").not("#board").empty();
       $(".container").find(".nine").first().html($("#board").html());
     }
 
-    //Empties all classes off the board?
+    //makes new game
     boardSquares.each(function() {
       $(this).addClass("empty").empty();
     })
     isGameInProgress = true;
   })
 
-  //Explain this funciton, describe the parameters; what are the possible values of the paramaters
+
   function checkIfWon(chosenSquare) {
 
     var mulitArr = winningCombos[chosenSquare];
