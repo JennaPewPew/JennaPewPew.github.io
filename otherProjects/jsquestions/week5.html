@@ -17,8 +17,13 @@
     }
 
     .question {
-      font-size: 20px;
-      align-content: center;
+      font-size: 18px;
+    }
+
+    .answer{
+      font-size: 16px;
+      font-weight:bold;
+
     }
   </style>
 </head>
@@ -28,15 +33,15 @@
   <div class="container">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#q1" aria-controls="home" role="tab" data-toggle="tab">Q1</a></li>
-      <li role="presentation"><a href="#q2" aria-controls="profile" role="tab" data-toggle="tab">Q2</a></li>
-      <li role="presentation"><a href="#q3" aria-controls="messages" role="tab" data-toggle="tab">Q3</a></li>
-      <li role="presentation"><a href="#q4" aria-controls="settings" role="tab" data-toggle="tab">Q4</a></li>
-      <li role="presentation"><a href="#q5" aria-controls="profile" role="tab" data-toggle="tab">Q5</a></li>
-      <li role="presentation"><a href="#q6" aria-controls="messages" role="tab" data-toggle="tab">Q6</a></li>
-      <li role="presentation"><a href="#q7" aria-controls="settings" role="tab" data-toggle="tab">Q7</a></li>
-      <li role="presentation"><a href="#q8" aria-controls="messages" role="tab" data-toggle="tab">Q8</a></li>
-      <li role="presentation"><a href="#q9" aria-controls="settings" role="tab" data-toggle="tab">Q9</a></li>
+      <li role="presentation" class="active"><a href="#q1" aria-controls="home" role="tab" data-toggle="tab">Question 1</a></li>
+      <li role="presentation"><a href="#q2" aria-controls="profile" role="tab" data-toggle="tab">Question 2</a></li>
+      <li role="presentation"><a href="#q3" aria-controls="messages" role="tab" data-toggle="tab">Question 3</a></li>
+      <li role="presentation"><a href="#q4" aria-controls="settings" role="tab" data-toggle="tab">Question 4</a></li>
+      <li role="presentation"><a href="#q5" aria-controls="profile" role="tab" data-toggle="tab">Question 5</a></li>
+      <li role="presentation"><a href="#q6" aria-controls="messages" role="tab" data-toggle="tab">Question 6</a></li>
+      <li role="presentation"><a href="#q7" aria-controls="settings" role="tab" data-toggle="tab">Question 7</a></li>
+      <li role="presentation"><a href="#q8" aria-controls="messages" role="tab" data-toggle="tab">Question 8</a></li>
+      <li role="presentation"><a href="#q9" aria-controls="settings" role="tab" data-toggle="tab">Question 9</a></li>
     </ul>
 
     <!-- Tab panes -->
@@ -74,7 +79,7 @@
             <button id="q1button" class="btn btn-success pull-right" type="button">Click Here</button>
           </div>
 
-          <div class="col-md-12">
+          <div class="col-md-12 answer">
             <!--Da Result -->
             <div id="q1result">
 
@@ -124,7 +129,7 @@
             <button id="q2button" class="btn btn-success pull-right" type="button">Click Here</button>
           </div>
 
-          <div class="col-md-12">
+          <div class="col-md-12 answer">
             <!--Da Result -->
             <div id="q2result">
 
@@ -221,7 +226,7 @@
             <button id="q4button" class="btn btn-success pull-right" type="button">Click Here</button>
           </div>
 
-          <div class="col-md-12">
+          <div class="col-md-12 answer">
             <!--Da Result -->
             <div id="q4result">
 
@@ -265,7 +270,7 @@
             <button id="q5button" class="btn btn-success pull-right" type="button">Click Here</button>
           </div>
 
-          <div class="col-md-12">
+          <div class="col-md-12 answer">
             <!--Da Result -->
             <div id="q5result">
 
@@ -311,7 +316,7 @@
             <button id="q6button" class="btn btn-success pull-right" type="button">Click Here</button>
           </div>
 
-          <div class="col-md-12">
+          <div class="col-md-12 answer">
             <!--Da Result -->
             <div id="q6result">
 
@@ -323,10 +328,11 @@
       <!-- Question Seven -->
       <div role="tabpanel" class="tab-pane" id="q7">
         <div class="row">
-          <div class="question">
-            Write a sum function that takes an array of numbers and returns the sum of these numbers.
-          </div>
+
           <div class="col-md-12">
+            <div class="question">
+              Write a sum function that takes an array of numbers and returns the sum of these numbers.
+            </div>
             <pre> <!--Pre Code Here -->
               function sum(array) {
                 var sm = 0;
@@ -346,7 +352,7 @@
           </pre>
           </div>
 
-          <div class="col-md-12">
+          <div class="col-md-12 answer">
             <!--Da button -->
 
             <button id="q7button" class="btn btn-success pull-right" type="button">Click Here</button>
@@ -394,7 +400,7 @@
             <button id="q8button" class="btn btn-success pull-right" type="button">Click Here</button>
           </div>
 
-          <div class="col-md-12">
+          <div class="col-md-12 answer">
             <!--Da Result -->
             <div id="q8result">
 
@@ -411,7 +417,6 @@
               Write a function that modifies the array given in order to reverse its elements without creating a new array.
             </div>
             <pre> <!--Pre Code Here -->
-
               function arrayReverseInPlace(array) {
                 for (var i = 0; i < array.length/2; i++) {
                   var temp = array[i];
@@ -429,13 +434,13 @@
           </pre>
           </div>
 
-          <div class="col-md-12">
+          <div class="col-md-12 ">
             <!--Da button -->
 
             <button id="q9button" class="btn btn-success pull-right" type="button">Click Here</button>
           </div>
 
-          <div class="col-md-12">
+          <div class="col-md-12 answer">
             <!--Da Result -->
             <div id="q9result">
 

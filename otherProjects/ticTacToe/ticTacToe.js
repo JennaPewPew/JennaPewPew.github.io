@@ -86,29 +86,31 @@ $(document).ready(function() {
     isGameInProgress = true;
   })
 
-
+  //Explain this funciton, describe the parameters; what are the possible values of the paramaters
+  //It is going to check to see if the square inputted is equal to one of the winning combos, if they have the program stops, if they haven't it runs again
   function checkIfWon(chosenSquare) {
 
     var mulitArr = winningCombos[chosenSquare];
     var playerWon;
 
-    for (var i = 0; i < mulitArr.length; i++) { //Explain this nested for loop
+    for (var i = 0; i < mulitArr.length; i++) { //as long as the value of i is less than the length of the multiarray, playerwon is true
       playerWon = true;
       for (var j = 0; j < mulitArr[i].length; j++) {
-        if (!$("#board").find("div").eq(mulitArr[i][j]).find("span").hasClass(circleOrEx)) { //Explain this condition
+        if (!$("#board").find("div").eq(mulitArr[i][j]).find("span").hasClass(circleOrEx)) { //if the div does not have the class circleOrEx then playerWon will return as false
           playerWon = false;
         }
       }
 
       if (playerWon) { //Explain the condition and every line in the block
+        // If player wins,  alert that the appropriate case won then set gameinprogress to false, ending the loop
 
-        for (var j = 0; j < mulitArr[i].length; j++) {
-          $("#board").find("div").eq(mulitArr[i][j]).find("." + circleOrEx).addClass("green"); //Explain this condition
-        }
-        $("#board").find("div").eq(chosenSquare).find("." + circleOrEx).addClass("green");
+        for (var j = 0; j < mulitArr[i].length; j++) {//for this loop to run the value of j must be less than the length of the multiarray
+          $("#board").find("div").eq(mulitArr[i][j]).find("." + circleOrEx).addClass("green"); //it finds the board that has equal value to one of the winning cases and changes the elements in that winning case to green
+        } //
+        $("#board").find("div").eq(chosenSquare).find("." + circleOrEx).addClass("green");// find which won, x or o
         alert("Winner is " + circleOrEx.toUpperCase() + "!");
         isGameInProgress = false;
-        return false; //this exits the loop
+        return false; //this ends the loop
       }
     }
 
