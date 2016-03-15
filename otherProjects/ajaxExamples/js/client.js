@@ -1,4 +1,9 @@
-$("#getClients").on("click",function(){
+$("#getClients").on("click", function() {
 
-  alert("working");
+  var url = "http://JennaPewPew.github.io/otherProjects/ajaxExamples/jsonDatabase/clients.json"
+  $.getJSON(url, function(data) {
+    alert(data);
+    console.dir(data);
+
+  })
 })
