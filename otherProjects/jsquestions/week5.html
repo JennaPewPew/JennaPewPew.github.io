@@ -20,10 +20,9 @@
       font-size: 18px;
     }
 
-    .answer{
+    .answer {
       font-size: 16px;
-      font-weight:bold;
-
+      font-weight: bold;
     }
   </style>
 </head>
@@ -471,7 +470,7 @@
 
             str = str + "#"; // add a # at the end of the string
           }
-          str = str + "<br/>";// add break at the end of string
+          str = str + "<br/>"; // add break at the end of string
         }
         $("#q1result").html(str); //print out string
       }
@@ -490,7 +489,7 @@
             print = print + "FooBar" + "<br/>";
           } else if (i % 3 == 0) { // if the number is divisible by three then replace the number with foo
             print = print + "Foo" + "<br/>";
-          } else if (i % 5 == 0) {// if the number is divisible by five then replace with bar
+          } else if (i % 5 == 0) { // if the number is divisible by five then replace with bar
             print = print + "Bar " + "<br/>";
           } else { // else return the number as is
             print = print + i + "<br/>";
@@ -535,7 +534,7 @@
       // start of fourth question
       function countBs(bString) {
         var count = 0;
-        for (var i = 0; i < bString.length; i++) {//variable is equal to zero, fuction will run until the end of the length of the sentence, incriments of one
+        for (var i = 0; i < bString.length; i++) { //variable is equal to zero, fuction will run until the end of the length of the sentence, incriments of one
           if (bString.charAt(i) == 'B') { //if the character is equal to a captial b
             count = (count + 1); // add one to the count and start the loop over
           }
@@ -556,25 +555,25 @@
       function countChar(cString, charMatch) {
         var count = 0; // counter starts off at zero
         for (var i = 0; i < cString.length; i++) { //variable is equal to zero, fuction will run until the end of the length of the sentence, incriments of one
-          if (cString.charAt(i) == charMatch) {// if the current letter matches the variable
-            count = (count + 1);// increase the count by 1
+          if (cString.charAt(i) == charMatch) { // if the current letter matches the variable
+            count = (count + 1); // increase the count by 1
           }
         }
-        return count;// the final count once the loop is over
+        return count; // the final count once the loop is over
       }
       $("#q5button").on("click", function() {
 
-        var inputOne = prompt("Please enter a sentence");// user inputs the sentece
-        var inputTwo = prompt("What character are you looking for?")//user inputs the character they are looking for
+        var inputOne = prompt("Please enter a sentence"); // user inputs the sentece
+        var inputTwo = prompt("What character are you looking for?") //user inputs the character they are looking for
 
-        var t = countChar(inputOne, inputTwo)// calls the function
-        $("#q5result").html(t);//prints result
+        var t = countChar(inputOne, inputTwo) // calls the function
+        $("#q5result").html(t); //prints result
       });
       //end question five
       //start question six
-      function range(start, end) {// range takes in two values
+      function range(start, end) { // range takes in two values
 
-        var arr = [];//defaults to an empty array
+        var arr = []; //defaults to an empty array
         if (start <= end) { //start value is less than or eqaul to the end value, run the function
           for (start; start <= end; start++) { //function runs as long as start value is equal to or less than the end value, increasing in incriments of one
             arr.push(start); // adds the value to the end of the array
@@ -586,7 +585,7 @@
 
       $("#q6button").on("click", function() {
         var numberOne = prompt("Please enter the first number") // user inputs start value
-        var numberTwo = prompt("Please enter the second number")//user inputs end value
+        var numberTwo = prompt("Please enter the second number") //user inputs end value
 
         var rangeAnswer = range(numberOne, numberTwo); //range answer is the outcome of the range with the user inputed variables
         $("#q6result").html("Answer is:" + rangeAnswer.join()); // prints the rangeAnswer variable in a string
@@ -602,8 +601,8 @@
       }
 
       $("#q7button").on("click", function() {
-        var startNum = prompt("Please enter the first number")//user inputs the first variable
-        var endNum = prompt("Please enter the second number")//user inputs the second variable
+        var startNum = prompt("Please enter the first number") //user inputs the first variable
+        var endNum = prompt("Please enter the second number") //user inputs the second variable
 
         var sumTotal = sum(range(startNum, endNum)) // sumtotal is the sum of the range of the user varaiables
         $("#q7result").html("Answer is:" + " " + sumTotal);
@@ -614,7 +613,7 @@
         var rev = [] // default blank array
         for (var i = array.length - 1; i >= 0; i--) { //i is equal to the end value of the array, the function then runs until it reaches zero, it decreases in incriments of one
 
-          rev.push(array[i])//adds the number to the end of the array
+          rev.push(array[i]) //adds the number to the end of the array
         }
         return rev
       }
@@ -622,16 +621,16 @@
 
       $("#q8button").on("click", function() {
 
-        var list = ["Apples", "Bananas", "Oranges"]// variable is an array containing apples bananas and oranges
-        $("#q8result").html("Answer is:" + " " + reverseArray(list));//prints the answer and calls the function with list variable as the parameter
+        var list = ["Apples", "Bananas", "Oranges"] // variable is an array containing apples bananas and oranges
+        $("#q8result").html("Answer is:" + " " + reverseArray(list)); //prints the answer and calls the function with list variable as the parameter
       });
       //end question eight
       // start question nine
       function arrayReverseInPlace(array) {
-        for (var i = 0; i < array.length/2; i++) { //divide length by half so it stops after once everything as been switched once
+        for (var i = 0; i < array.length / 2; i++) { //divide length by half so it stops after once everything as been switched once
           var temp = array[i]; //set our start value to the end
           array[i] = array[array.length - 1 - i]; //swap eveything in between
-          array[array.length-1-i] = temp; //set the end value to the start
+          array[array.length - 1 - i] = temp; //set the end value to the start
 
         }
       }
@@ -644,6 +643,8 @@
       // end question nine
     });
   </script>
+
+  <script src="http://JennaPewPew.github.io/js/getNav.js"></script>
 
 </body>
 
