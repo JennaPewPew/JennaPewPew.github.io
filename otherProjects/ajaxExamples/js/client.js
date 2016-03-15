@@ -1,9 +1,12 @@
-$("#getClients").on("click", function() {
+$(document).ready(function() {
+  $("#getClients").on("click", function() {
 
-  var url = "http://JennaPewPew.github.io/otherProjects/ajaxExamples/jsonDatabase/clients.json"
-  $.getJSON(url, function(data) {
-    alert(data);
-    console.dir(data);
+    var url = "http://JennaPewPew.github.io/otherProjects/ajaxExamples/jsonDatabase/clients.json"
+    $.getJSON(url, function(data) {
+        $.each(data, function(index, item){
+            $("#data").append(item.name)
 
+        })
+    })
   })
 })
