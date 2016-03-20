@@ -3,18 +3,20 @@ $(document).ready(function() {
 
     var url = "http://JennaPewPew.github.io/otherProjects/ajaxExamples/jsonDatabase/clients.json"
     $.getJSON(url, function(data) {
-      var html = "<ul class='list-group'>";
+      var html = "<div class='col-md-4'>";
 
 
       $.each(data, function(index, item) {
-        html +=
+        html += "<ul class= 'list-group'>" +
         "<li class='list-group-item bold'>" + item.name + "</li>" +
-        "<li class='list-group-item'>" + item.email + "</li>" +
-        "<li class='list-group-item'>" + item.company + "</li>"
-        +"<br/>";
+        "<li class='list-group-item'>" + item.make + "</li>" +
+        "<li class='list-group-item'>" + item.model + "</li>" +
+        "<li class='list-group-item'>" + item.year + "</li>"+
+        "<li class='list-group-item'>" + item.color + "</li>"+
+        "</ul>";
       })
 
-      html + "</ul>";
+      html + "</div>";
       $("#data").append(html);
     })
   })
