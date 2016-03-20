@@ -8,7 +8,7 @@ $(document).ready(function() {
 
       $.each(data, function(index, item) {
         html +=
-        "<li class='list-group-item'>" + item.name + "</li>" +
+        "<li class='list-group-item bold'>" + item.name + "</li>" +
         "<li class='list-group-item'>" + item.email + "</li>" +
         "<li class='list-group-item'>" + item.company + "</li>"
         +"<br/>";
