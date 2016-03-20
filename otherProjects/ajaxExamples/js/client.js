@@ -1,19 +1,18 @@
 $(document).ready(function() {
   $("#getClients").on("click", function() {
 
-    var url = "http://JennaPewPew.github.io/otherProjects/ajaxExamples/jsonDatabase/clients2.json"
+    var url = "http://JennaPewPew.github.io/otherProjects/ajaxExamples/jsonDatabase/clients.json"
     $.getJSON(url, function(data) {
-      var html = "<div class='col-md-4'>";
+      var html = "<table class='table table-hover table-striped table-responsive'>" +
+        "<tr><th>Name</th><th>Email</th><th>Company</th></tr>";
 
 
       $.each(data, function(index, item) {
-        html += "<ul class= 'list-group'>" +
-        "<li class='list-group-item bold'>" + item.name + "</li>" +
-        "<li class='list-group-item'>" + item.make + "</li>" +
-        "<li class='list-group-item'>" + item.model + "</li>" +
-        "<li class='list-group-item'>" + item.year + "</li>"+
-        "<li class='list-group-item'>" + item.color + "</li>"+
-        "</ul>";
+        html += "<tr>" +
+         "<td>" + item.name + "</td>" +
+         "<td>" + item.email + "</td>" +
+         "<td>" + item.company + "</td>"+
+         "</tr>";
       })
 
       html + "</div>";
