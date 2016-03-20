@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $("#getClients").on("click", function() {
 
-    var url = "http://JennaPewPew.github.io/otherProjects/ajaxExamples/jsonDatabase/clients.json"
+    var url = "http://JennaPewPew.github.io/otherProjects/ajaxExamples/jsonDatabase/clients2.json"
     $.getJSON(url, function(data) {
       var html = "<div class='col-md-4'>";
 
