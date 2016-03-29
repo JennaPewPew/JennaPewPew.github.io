@@ -1,0 +1,15 @@
+.carousel {
+  background: #white;
+  margin-top: 20px;
+}
+
+.carousel .item img {
+  margin: 0 auto;
+  width: 960px;
+
+  /* Align slide image horizontally center */
+}
+
+.bs-example {
+  margin: 20px;
+}
