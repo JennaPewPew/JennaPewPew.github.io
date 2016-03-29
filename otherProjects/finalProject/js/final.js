@@ -17,7 +17,7 @@ $(document).ready(function() {
     } else if (partial == "pg2") {
 
     } else if (partial == "pg3") {
-      $.get("partial/orderPage.html", function(order) {
+      $.get("partials/orderPage.html", function(order) {
         $("#pageContent").html(order)
       })
     }
