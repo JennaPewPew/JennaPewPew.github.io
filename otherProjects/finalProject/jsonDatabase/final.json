@@ -1,0 +1,51 @@
+[{
+  "city": "Firenze",
+  "style": "Hotel",
+  "price": "$1,132",
+  "image": "images/florence-hotel.jpg"
+
+}, {
+  "city": "Firenze",
+  "style": "Apartment",
+  "price": "$1,549",
+  "image": "images/florence-apartment.jpg"
+
+}, {
+  "city": "Firenze",
+  "style": "House",
+  "price": "$1,753",
+  "image": "images/florence-house.jpg"
+
+}, {
+  "city": "Roma",
+  "style": "Hotel",
+  "price": "$1,612",
+  "image": "images/rome-hotel.jpg"
+
+}, {
+  "city": "Roma",
+  "style": "Apartment",
+  "price": "$1,461",
+  "image": "images/rome-apartment.jpg"
+
+}, {
+  "city": "Roma",
+  "style": "House",
+  "price": "$2,035",
+  "image": "images/rome-house.jpg"
+}, {
+  "city": "Pacentro",
+  "style": "Hotel",
+  "price": "$1,150",
+  "image": "images/pacentro-hotel.jpeg"
+}, {
+  "city": "Pacentro",
+  "style": "Apartment",
+  "price": "$1,387",
+  "image": "images/pacentro-apartment.jpg"
+}, {
+  "city": "Pacentro",
+  "style": "House",
+  "price": "$1,726",
+  "image": "images/pacentro-house.jpg"
+}]

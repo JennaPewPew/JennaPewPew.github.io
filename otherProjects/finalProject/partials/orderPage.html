@@ -1,68 +1,76 @@
     <div class="row">
-      <div class="col-md-4">
-        <h3>Please Choose Your Options</h3>
+      <div class="col-lg-4 col-sm-12">
+        <h4>Where will you stay?</h4>
         <label class="checkbox-inline">
           <div class="radio">
             <label>
-              <input type="radio" name="color" id="optionsRadios1" value="Tan and White" checked> Tan and White
+              <input type="radio" name="color" id="optionsRadios1" value="firenze" checked> Firenze
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="color" id="optionsRadios2" value="Grey and White"> Grey and White
+              <input type="radio" name="color" id="optionsRadios2" value="roma"> Roma
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="color" id="optionsRadios3" value="Black and White"> Black and White
+              <input type="radio" name="color" id="optionsRadios2" value="pacentro"> Pacentro
             </label>
           </div>
-          <h4>Select any additional options</h4>
+        </label>
+      </div>
+      <div class="col-lg-4 col-sm-12">
+          <h4>Additional Services</h4>
           <div class="checkbox">
             <label>
-              <input type="checkbox" name="extra" value="Add Trim">Add leather Trim $15.00
+              <input type="checkbox" name="extra" value="housekeeping">Housekeeping
             </label>
           </div>
           <div class="checkbox">
             <label>
-              <input type="checkbox" name="extra" value="Add Clasp">Add Metal Clasp $20.00
+              <input type="checkbox" name="extra" value="meals">Precooked meals
             </label>
           </div>
           <div class="checkbox">
             <label>
-              <input type="checkbox" name="extra" value="Add one day shipping">One Day Delivery $12.75
+              <input type="checkbox" name="extra" value="tour">Guided tour of the City
             </label>
           </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
           <select id="mySelect" class="form-control">
-            <option>Select Quantity</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
+            <option>Select Accomadations</option>
+            <option>Hotel</option>
+            <option>House</option>
+            <option>Appartment</option>
           </select>
           <div id="mySelectMessage"></div>
       </div>
 
-      <div class="col-md-4 addpad">
+      <div class="col-lg-12 col-sm-6">
         <textarea id="myTextArea" class="form-control" rows="5" placeholder="Additional Requests"></textarea>
       </div>
 
-      <div class="col-md-4 addpad">
-        <form class="form-inline">
-          <div class="form-group">
-            <label for="exampleInputName2">Name</label>
+      <div class="col-lg-6 col-sm-12 col-md-6">
+        <form>
+          <div class="form-group col-xs-12">
+            <label for="exampleInputName2">First Name</label>
             <input type="text" class="form-control" id="mySingleLineText" placeholder="Homer Simpson">
           </div>
-          <div class="form-group">
-            <label for="exampleInputEmail2">Email&nbsp;</label>
-            <input type="email" class="form-control" id="mySingleLineText2" placeholder="duff_rules@example.com">
+        </form>
+    </div>
+    <div class="col-lg-6 col-sm-12 col-md-6">
+      <form>
+          <div class="form-group col-xs-12">
+            <label for="exampleInputName2">Last Name</label>
+            <input type="text" class="form-control" id="mySingleLineText" placeholder="Homer Simpson">
           </div>
         </form>
       </div>
 
 
-      <div class="col-md-4 addpad">
-        <button id="myButton" type="button" class="btn btn-primary btn-lg btn btn-success btn-block">Add to Cart</button>
+      <div class="col-lg-12">
+        <button id="myButton" type="button" class="btn btn-primary btn-lg btn btn-success btn-block">Book Now</button>
       </div>
       <div class="col-md-12" id="log"></div>
     </div>
