@@ -114,7 +114,7 @@ $(document).ready(function() {
             $("#receipt").append("<br> Please check your email for a confirmation receipt");
 
 
-               alert("send to databse: " + JSON.stringify(userOrder));
+            alert("send to databse: " + JSON.stringify(userOrder));
           });
 
 
