@@ -105,13 +105,14 @@ $(document).ready(function() {
 
 
             // log all of these values onto the screen once the button is clicked
-            $("#recipt").append("<br> Your Order has been proccessed, you have chosen:");
-            $("#recipt").append("<br> City: " + userOrder.myRadio);
-            $("#recipt").append("<br>Accomadations: " + userOrder.mySelect);
-            $("#recipt").append("<br> Extra Features"  + userOrder.myCheckValues.join());
-            $("#recipt").append("<br>Additional Reqests: " + userOrder.myTextArea);
-            $("#recipt").append("<br> Name and email: " + userOrder.myInput + " " + userOrder.myInput2);
-            
+            $("#receipt").append("<br> Your Order has been proccessed, you have chosen:");
+            $("#receipt").append("<br> City: " + userOrder.myRadio);
+            $("#receipt").append("<br>Accomadations: " + userOrder.mySelect);
+            $("#receipt").append("<br> Extra Features"  + userOrder.myCheckValues.join());
+            $("#receipt").append("<br>Additional Reqests: " + userOrder.myTextArea);
+            $("#receipt").append("<br> Name and email: " + userOrder.myInput + " " + userOrder.myInput2);
+            $("#receipt").append("<br> Please check your email for a confirmation receipt");
+
 
                alert("send to databse: " + JSON.stringify(userOrder));
           });
