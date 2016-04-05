@@ -44,20 +44,38 @@
 
 /*Index Styling*/
 body{
-font-family: "Arimo", sans-serif;
+font-family: "Arimo", sans-serif !important;
 background-image: url(../images/new_year_background.png);
 
 }
-h1{
+.header-title{
   font-family:"Parisienne",cursive;
+  font-size: 100px;
+  margin-bottom: 60px;
 }
 .jumbotron{
-  background-image: url(../images/jumbotron-background.jpg);
+      position: relative;
+      background: #000 url("../images/jumbotron-background.jpg") center center;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      overflow: hidden;
+      text-align:center;
 }
 .nav{
   font-size: 18px;
 }
+.nav-pills > li > a{
+color:green !important;
 
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color:white !important;
+    background-color:green;
+    }
+.nav-pills li a:hover{
+  background-color: white;
+}
 col-md-6{
   padding-top:20px;
 }
@@ -67,6 +85,18 @@ col-md-6{
 }
 .comment2{
   margin-top: 25px;
+}
+h2{
+  font-family: "Parisienne",cursive;
+  font-size: 40px;
+}
+.intro{
+  font-size: 20px;
+  margin-top: 10px;
+}
+.text-break{
+  width:100%;
+  height: auto;
 }
 /*Order Page Styling*/
 #myTextArea{
@@ -79,4 +109,7 @@ col-md-6{
 }
 #log{
   text-align:center;
+}
+.green{
+  background-color: green;
 }

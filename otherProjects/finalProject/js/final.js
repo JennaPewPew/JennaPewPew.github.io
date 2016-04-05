@@ -76,7 +76,7 @@ $(document).ready(function() {
             })
             .on("mouseleave", function() {
               $("#log").append("<br/>Button Mouse Leave")
-              $(this).text("Add To Cart") // reverts changes once mouse leaves button
+              $(this).text("Book Now") // reverts changes once mouse leaves button
             });
 
 
