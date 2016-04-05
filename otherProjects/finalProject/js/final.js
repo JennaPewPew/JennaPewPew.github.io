@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  console.log("Hi Mark!");
   //all the nav li, add click event
   $(".nav").find("li").on("click", function() {
       //remove all active class
@@ -21,10 +22,10 @@ $(document).ready(function() {
     var html = "";
 
     $.each(data, function(index, item) {
-        html += '<div class="col-md-4">' +
+        html += '<div class="col-lg-4" col-sm-10 col-sm-offset-1 col-md-4>' +
           '<div class="city">' + "  "+ item.city + '</div>' +
-          '<div class="style"><small>Accomadation Style</small>' + "  "+ item.style + '</div>' +
-          '<div class="price"><small>Cost</small>'+ "  " + item.price + '</div>' +
+          '<div class="style">Accomadation Style' + "  "+ item.style + '</div>' +
+          '<div class="price">Cost'+ "  " + item.price + '</div>' +
           '<img class="image" src="' + item.image + '"/>' +
 
           '</div>'; //col-md-4
