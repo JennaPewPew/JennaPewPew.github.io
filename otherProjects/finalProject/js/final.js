@@ -22,10 +22,10 @@ $(document).ready(function() {
     var html = "";
 
     $.each(data, function(index, item) {
-        html += '<div class="col-lg-4" col-sm-10 col-sm-offset-1 col-md-4>' +
+        html += '<div class="col-md-4" col-xs-10 col-xs-offset-1 >' +
           '<div class="city">' + "  "+ item.city + '</div>' +
-          '<div class="style">Accomadation Style' + "  "+ item.style + '</div>' +
-          '<div class="price">Cost'+ "  " + item.price + '</div>' +
+          '<div class="style">Style:' + "  "+ item.style + '</div>' +
+          '<div class="price">Cost:'+ "  " + item.price + '</div>' +
           '<img class="image" src="' + item.image + '"/>' +
 
           '</div>'; //col-md-4

@@ -98,6 +98,15 @@ h2{
   width:100%;
   height: auto;
 }
+/*Listing Page Styling*/
+.city{
+  font-size: 18px;
+  font-weight:700;
+}
+.image{
+  margin-bottom: 25px;
+  margin-top: 5px;
+}
 /*Order Page Styling*/
 #myTextArea{
   margin-bottom: 10px;
