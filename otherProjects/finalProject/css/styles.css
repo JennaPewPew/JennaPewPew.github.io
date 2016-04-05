@@ -42,14 +42,41 @@
 }
 /*Error Stylying Ends*/
 
-/*General Styling*/
+/*Index Styling*/
 body{
 font-family: "Arimo", sans-serif;
+background-image: url(../images/new_year_background.png);
+
+}
+h1{
+  font-family:"Parisienne",cursive;
+}
+.jumbotron{
+  background-image: url(../images/jumbotron-background.jpg);
 }
 .nav{
   font-size: 18px;
 }
+
+col-md-6{
+  padding-top:20px;
+}
+/*Home Page Styling*/
+.comment1{
+  margin-top: 25px;
+}
+.comment2{
+  margin-top: 25px;
+}
 /*Order Page Styling*/
+#myTextArea{
+  margin-bottom: 10px;
+  margin-top:10px;
+}
+#receipt{
+  background-color: white;
+  margin-top:15px;
+}
 #log{
   text-align:center;
 }
