@@ -1,3 +1,4 @@
+/* Carousel Stylings*/
 .carousel {
   background: #white;
   margin-top: 20px;
@@ -16,6 +17,9 @@
 .stretch{
   width: 400px;
 }
+/*Carousel Styling End*/
+
+/*Error Styling Begins*/
 .hide-name{
   color:red;
   font-weight:bold;
@@ -28,7 +32,24 @@
   color:red;
   font-weight:bold;
 }
+.hide-start-date{
+  color:red;
+  font-weight:bold;
+}
+.hide-end-date{
+  color:red;
+  font-weight:bold;
+}
+/*Error Stylying Ends*/
 
+/*General Styling*/
+body{
+font-family: "Arimo", sans-serif;
+}
+.nav{
+  font-size: 18px;
+}
+/*Order Page Styling*/
 #log{
   text-align:center;
 }

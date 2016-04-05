@@ -42,7 +42,10 @@ $(document).ready(function() {
           $(".hide-name").hide();
           $(".hide-email").hide();
           $(".hide-accomadations").hide();
+          $(".hide-start-date").hide();
+          $(".hide-end-date").hide();
 
+          $('#startRentDate, #endRentDate').datepicker({});
           $("#mySingleLineText").on("focus", function() {
               $("#log").append("<br/>Input Focus")
               $(this).css("background-color", "#EAF9E0") //changes the color of the input box when focuses
@@ -80,7 +83,17 @@ $(document).ready(function() {
 
           $("#myButton").on("click", function() { // when the button is clicked
 
-            if(document.getElementById("mySingleLineText").value == ""){
+            if(document.getElementById("startRentDate").value == ""){
+              alert("You forgot to pick a date")
+              $(".hide-start-date").show();
+              return false;
+            }
+            else if(document.getElementById("endRentDate").value == ""){
+              alert("You forgot to pick a date")
+              $(".hide-end-date").show();
+              return false;
+            }
+            else if(document.getElementById("mySingleLineText").value == ""){
               alert("You forgot to enter your name")
               $(".hide-name").show();
               return false;
@@ -102,10 +115,13 @@ $(document).ready(function() {
               $(".hide-name").hide();
               $(".hide-email").hide();
               $(".hide-accomadations").hide();
-
+              $(".hide-start-date").hide();
+              $(".hide-end-date").hide();
 
             $("#log").append("<br>User clicked the button!"); // log the values of the following object
             var userOrder = {}; // create new object
+            userOrder.startRentDate = $("#startRentDate").val();
+            userOrder.endRentDate = $("#endRentDate").val();
             userOrder.myInput = $("#mySingleLineText").val();
             userOrder.myInput2 = $("#mySingleLineText2").val();
             userOrder.myTextArea = $("#myTextArea").val();
@@ -122,6 +138,8 @@ $(document).ready(function() {
 
             // log all of these values onto the screen once the button is clicked
             $("#receipt").append("<br> Your Order has been proccessed, you have chosen:");
+            $("#receipt").append("<br> Check in: " + userOrder.startRentDate);
+            $("#receipt").append("<br> Check out: " + userOrder.endRentDate);
             $("#receipt").append("<br> City: " + userOrder.myRadio);
             $("#receipt").append("<br>Accomadations: " + userOrder.mySelect);
             $("#receipt").append("<br> Extra Features:" +" " + userOrder.myCheckValues.join());
