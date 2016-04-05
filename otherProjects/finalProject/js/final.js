@@ -38,13 +38,9 @@ $(document).ready(function() {
       $.get("partials/orderPage.html", function(order) {
         $("#pageContent").html(order)
         $(document).ready(function() {
-          /*
-          click - done
-          focus -
-          blur -
-          change -
-          ouseenter & mouseleave -
-          */
+          $(".hide-name").hide();
+          $(".hide-email").hide();
+          $(".hide-accomadations").hide();
 
           $("#mySingleLineText").on("focus", function() {
               $("#log").append("<br/>Input Focus")
@@ -63,7 +59,12 @@ $(document).ready(function() {
               $("#log").append("<br/>Input Change")
               $(this).css("background-color", "#FFFFFF") // same as above
             });
-
+            $("#mySelect").on("change", function() { // appends/changes the message underneath the select box depending on what is selected
+              $("#log").append("<br/>Change Selection")
+            });
+            $("#myLocation").on("change", function() { // appends/changes the message underneath the select box depending on what is selected
+              $("#log").append("<br/>Change Location")
+            });
 
           $("#myButton").on("mouseenter", function() {
               $("#log").append("<br/>Button Mouse Enter")
@@ -78,14 +79,28 @@ $(document).ready(function() {
 
           $("#myButton").on("click", function() { // when the button is clicked
 
-            /*
+            if(document.getElementById("mySingleLineText").value == ""){
+              alert("You forgot to enter your name")
+              $(".hide-name").show();
+              return false;
+            }
 
-                var myInput = $("#mySingleLineText").val();
-                var myInput2 = $("#mySingleLineText2").val();
-                var myTextArea = $("#myTextArea").val();
-                var mySelect = $("#mySelect").val();
-                var myRadio = $("[name='color']:checked").val();
-            */
+            else if (document.getElementById("mySingleLineText2").value == "") {
+              alert("You forgot to enter your email")
+              $(".hide-email").show();
+              return false;
+            }
+            else if (document.getElementById("mySelect").value == "Select Accomadations") {
+              alert("Please pick where you will stay")
+              $(".hide-accomadations").show();
+              return false;
+            }
+
+            else{
+
+              $(".hide-name").hide();
+              $(".hide-email").hide();
+              $(".hide-accomadations").hide();
 
 
             $("#log").append("<br>User clicked the button!"); // log the values of the following object
@@ -108,13 +123,16 @@ $(document).ready(function() {
             $("#receipt").append("<br> Your Order has been proccessed, you have chosen:");
             $("#receipt").append("<br> City: " + userOrder.myRadio);
             $("#receipt").append("<br>Accomadations: " + userOrder.mySelect);
-            $("#receipt").append("<br> Extra Features"  + userOrder.myCheckValues.join());
+            $("#receipt").append("<br> Extra Features:" +" " + userOrder.myCheckValues.join());
             $("#receipt").append("<br>Additional Reqests: " + userOrder.myTextArea);
             $("#receipt").append("<br> Name and email: " + userOrder.myInput + " " + userOrder.myInput2);
             $("#receipt").append("<br> Please check your email for a confirmation receipt");
 
 
             alert("send to databse: " + JSON.stringify(userOrder));
+            console.log(JSON.stringify(userOrder));
+
+}
           });
 
 

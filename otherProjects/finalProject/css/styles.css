@@ -16,3 +16,15 @@
 .stretch{
   width: 400px;
 }
+.hide-name{
+  color:red;
+  font-weight:bold;
+}
+.hide-email{
+  color:red;
+  font-weight:bold;
+}
+.hide-accomadations{
+  color:red;
+  font-weight:bold;
+}
