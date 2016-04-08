@@ -11,17 +11,17 @@ $(document).ready(function() {
       getPartial(page);
     }) // click
   function getPartial(partial) {
-    if (partial == "home") {
+    if (partial == "home") { // if the home nav is clicked do this script
       $.get("partials/home.html", function(data) {
         $("#pageContent").html(data)
-        $('.carousel').carousel();
+        $('.carousel').carousel();//makes carosel work
       })
-    } else if (partial == "pg2") {
+    } else if (partial == "pg2") {// if listng nac is clicked do this script
       $.getJSON("jsonDatabase/final.json", function(data) {
 
     var html = "";
 
-    $.each(data, function(index, item) {
+    $.each(data, function(index, item) { // oragnaizes the JSON Elements into html elements to be displayed on the screen
         html += '<div class="col-md-4" col-xs-10 col-xs-offset-1 >' +
           '<div class="city">' + "  "+ item.city + '</div>' +
           '<div class="style">Style:' + "  "+ item.style + '</div>' +
@@ -29,23 +29,23 @@ $(document).ready(function() {
           '<img class="image" src="' + item.image + '"/>' +
 
           '</div>'; //col-md-4
-      }) //each cat
+      }) // end each listing div
 
-    $("#pageContent").html(html);
+    $("#pageContent").html(html); // print info to screen
   }) //getJSON
 
 
-    } else if (partial == "pg3") {
+} else if (partial == "pg3") { //if the book nav is clicked do this script
       $.get("partials/orderPage.html", function(order) {
         $("#pageContent").html(order)
         $(document).ready(function() {
-          $(".hide-name").hide();
+          $(".hide-name").hide(); //hides the astrixs
           $(".hide-email").hide();
           $(".hide-accomadations").hide();
           $(".hide-start-date").hide();
           $(".hide-end-date").hide();
 
-          $('#startRentDate, #endRentDate').datepicker({});
+          $('#startRentDate, #endRentDate').datepicker({});// puts in a datepicker
           $("#mySingleLineText").on("focus", function() {
               $("#log").append("<br/>Input Focus")
               $(this).css("background-color", "#EAF9E0") //changes the color of the input box when focuses
@@ -84,39 +84,42 @@ $(document).ready(function() {
           $("#myButton").on("click", function() { // when the button is clicked
 
             if(document.getElementById("startRentDate").value == ""){
-              alert("You forgot to pick a date")
+              alert("You forgot to pick a date")//shows red error asterix and alerts the user that they forgot to fill in a mandatory field
               $(".hide-start-date").show();
               return false;
             }
             else if(document.getElementById("endRentDate").value == ""){
-              alert("You forgot to pick a date")
+              alert("You forgot to pick a date")//shows red error asterix and alerts the user that they forgot to fill in a mandatory field
               $(".hide-end-date").show();
               return false;
             }
             else if(document.getElementById("mySingleLineText").value == ""){
-              alert("You forgot to enter your name")
+              alert("You forgot to enter your name")//shows red error asterix and alerts the user that they forgot to fill in a mandatory field
               $(".hide-name").show();
               return false;
             }
 
             else if (document.getElementById("mySingleLineText2").value == "") {
-              alert("You forgot to enter your email")
+              alert("You forgot to enter your email")//shows red error asterix and alerts the user that they forgot to fill in a mandatory field
               $(".hide-email").show();
               return false;
             }
             else if (document.getElementById("mySelect").value == "Select Accomadations") {
-              alert("Please pick where you will stay")
+              alert("Please pick where you will stay")//shows red error asterix and alerts the user that they forgot to fill in a mandatory field
               $(".hide-accomadations").show();
               return false;
             }
 
             else{
 
-              $(".hide-name").hide();
+              $(".hide-name").hide();//hides the red error asterixs once everything has been filled out correctly
               $(".hide-email").hide();
               $(".hide-accomadations").hide();
               $(".hide-start-date").hide();
               $(".hide-end-date").hide();
+
+              //After the form has been completed hide button
+              $(".hide-button").hide();
 
             $("#log").append("<br>User clicked the button!"); // log the values of the following object
             var userOrder = {}; // create new object
@@ -136,7 +139,7 @@ $(document).ready(function() {
             });
 
 
-            // log all of these values onto the screen once the button is clicked
+            // log all of these values onto the screen once the button is clicked in the form of a reciept
             $("#receipt").append("<h2> Reciept </h2>");
             $("#receipt").append(" Your Order has been proccessed, you have chosen:");
             $("#receipt").append("<br> Check in: " + userOrder.startRentDate);
@@ -149,7 +152,7 @@ $(document).ready(function() {
             $("#receipt").append("<br> <div class='bottom-padding'>Please check your email for a confirmation receipt</div>");
 
 
-            alert("send to databse: " + JSON.stringify(userOrder));
+            alert("send to databse: " + JSON.stringify(userOrder));// sends the user order to the database
             console.log(JSON.stringify(userOrder));
 
 }
@@ -164,5 +167,5 @@ $(document).ready(function() {
 
   }
   // begin the program, get the homepage
-  getPartial("home");
+  getPartial("home"); // loads home page to screen
 })
