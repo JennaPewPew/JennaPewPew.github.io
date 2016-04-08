@@ -107,6 +107,13 @@ h2{
   margin-bottom: 25px;
   margin-top: 5px;
 }
+
+.style{
+  font-size: 16px;
+}
+.price{
+  font-size: 16px;
+}
 /*Order Page Styling*/
 #myTextArea{
   margin-bottom: 10px;
